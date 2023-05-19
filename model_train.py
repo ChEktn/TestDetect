@@ -118,7 +118,6 @@ if __name__=='__main__':
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     torch.cuda.empty_cache()
     model = create_model(num_classes=2).to(device)
-    #optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9, weight_decay=0.0005)
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4, weight_decay=0.0005)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.9)
 

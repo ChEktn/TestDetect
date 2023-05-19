@@ -36,8 +36,3 @@ if __name__ == '__main__':
             writer = csv.writer(file)
             list_masks = [f'image_{i}.jpg', pos_menu[0], pos_menu[1], pos_menu[0]+size_menu[0], pos_menu[1]+size_menu[1], 'burger-menu']
             writer.writerow(list_masks)
-
-    #img_mask = Image.new(mode='1', size=(500, 800), color=0)
-    #img_mask_menu = Image.new(mode='1', size=size_menu, color=1)
-    #img_mask.paste(img_mask_menu, pos_menu)
-    #img_mask.save(f'masks/mask_{i}.jpg')
